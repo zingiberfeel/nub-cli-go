@@ -149,7 +149,6 @@ func startRabbitRPC(snippet SnippetMessage) (res string) {
 			for d := range msgs {
 				if corrId == d.CorrelationId {
 					res = string(d.Body)
-					log.Print(res)
 					break
 				}
 			}
